@@ -11,15 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Build docker image
-      uses: docker/build-push-action@v4
+    - name: Build and Run E2E tests
+      uses: isbang/compose-action@v1.4.1
       with:
-        context: .
-        file: ./Dockerfile
-        push: false
-
-    - name: Run E2E tests
-      run: docker compose run e2e
+        compose-file: "./docker-compose.yml"
+        services: |
+          e2e
 
     - uses: actions/upload-artifact@v3
       if: always()
