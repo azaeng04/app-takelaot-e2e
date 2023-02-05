@@ -17,7 +17,6 @@ jobs:
         compose-file: "./docker-compose.yml"
         services: |
           e2e
-      run: docker compose run e2e
 
     - uses: actions/upload-artifact@v3
       if: always()
