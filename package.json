@@ -1,0 +1,26 @@
+{
+  "name": "app-takelaot-e2e",
+  "version": "1.0.0",
+  "description": "E2E tests for Takelaot",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azaeng04/app-takelaot-e2e.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azaeng04/app-takelaot-e2e/issues"
+  },
+  "homepage": "https://github.com/azaeng04/app-takelaot-e2e#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.30.0"
+  },
+  "dependencies": {
+    "@types/node": "^18.11.18"
+  }
+}

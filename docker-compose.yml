@@ -1,0 +1,12 @@
+
+version: '3.8'
+
+services:
+  e2e:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: pnpm test
+    volumes:
+      - .:/e2e/
+
