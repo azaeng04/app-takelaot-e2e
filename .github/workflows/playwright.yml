@@ -11,12 +11,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Build and Run E2E tests
-      uses: isbang/compose-action@v1.4.1
+    - uses: pnpm/action-setup@v2
       with:
-        compose-file: "./docker-compose.yml"
-        services: |
-          e2e
+        version: 7.26.3
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Run E2E tests
+      run: pnpm test
 
     - uses: actions/upload-artifact@v3
       if: always()
